@@ -1,15 +1,45 @@
+import React, {Component} from 'react'
+import ReactDOM from 'react-dom';
+import config from './config.json';
+import styles from './main.css';//导入
+import {Grid, Row, Col, Clearfix} from "react-bootstrap";
+
+
 const dummySentences = ['Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', 'Donec hendrerit tempor tellus.', 'Donec pretium posuere tellus.', 'Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', 'Nulla posuere.', 'Donec vitae dolor.', 'Nullam tristique diam non turpis.', 'Cras placerat accumsan nulla.', 'Nullam rutrum.', 'Nam vestibulum accumsan nisl.'];
 
-const gridInstance = (
-    <Grid>
-        <Row className="show-grid">
-            <Col sm={6} md={3}><code>&lt;{'Col sm={6} md={3}'} /&gt;</code><br/>{dummySentences.slice(0, 6).join(' ')}</Col>
-            <Col sm={6} md={3}><code>&lt;{'Col sm={6} md={3}'} /&gt;</code><br/>{dummySentences.slice(0, 4).join(' ')}</Col>
-            <Clearfix visibleSmBlock><code>&lt;{'Clearfix visibleSmBlock'} /&gt;</code></Clearfix>
-            <Col sm={6} md={3}><code>&lt;{'Col sm={6} md={3}'} /&gt;</code><br/>{dummySentences.slice(0, 6).join(' ')}</Col>
-            <Col sm={6} md={3}><code>&lt;{'Col sm={6} md={3}'} /&gt;</code><br/>{dummySentences.slice(0, 2).join(' ')}</Col>
-        </Row>
-    </Grid>
-);
+class MainPart extends Component {
+    render() {
+        return (
+            <Grid>
+                <Row className="show-grid">
+                    <Col xs={12} sm={12} md={4} lg={4}><br/>
+                        <div className={styles.singlePanel}>
 
-ReactDOM.render(gridInstance, mountNode);
+                        </div>
+                    </Col>
+                    {/*<Col sm={6} md={3}><code>&lt;{'Col sm={6} md={3}'} /&gt;</code><br/>{dummySentences.slice(0, 4).join(' ')}</Col>*/}
+                    <Clearfix visibleSmBlock></Clearfix>
+                    <Col xs={12} sm={12} md={4} lg={4}><br/>
+                        <div className={styles.singlePanel}>
+
+                        </div>
+                    </Col>
+                    <Col xs={12} sm={12} md={4} lg={4}><br/>
+                        <div className={styles.singlePanel}>
+
+                        </div>
+                    </Col>
+                </Row>
+                {/*<Row className="show-grid">*/}
+                {/*<Col xs={12} sm={12} md={6} lg={6}><br/></Col>*/}
+                {/*/!*<Col sm={6} md={3}><code>&lt;{'Col sm={6} md={3}'} /&gt;</code><br/>{dummySentences.slice(0, 4).join(' ')}</Col>*!/*/}
+                {/*<Clearfix visibleSmBlock></Clearfix>*/}
+                {/*<Col xs={6} sm={6} md={3} lg={3}><br/>b</Col>*/}
+                {/*<Col xs={6} sm={6} md={3} lg={3}><br/>c</Col>*/}
+                {/*</Row>*/}
+            </Grid>
+        );
+    }
+}
+
+export default MainPart

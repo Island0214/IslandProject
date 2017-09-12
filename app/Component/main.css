@@ -4,6 +4,7 @@ html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     background-color: #bbe4d2;
+    background-color: #D5E8D5;
 }
 
 *, *:before, *:after {
@@ -20,3 +21,27 @@ h1, h2, h3, h4, h5, h6, p, ul {
     padding: 0;
 }
 
+h1 {
+    width: 100%;
+    text-align: center;
+    /* margin: 0; */
+    padding: 0;
+    font-size: 48px;
+    color: #D5E8D5;
+    font-weight: 300;
+    letter-spacing: 10px;
+    padding-bottom: 10px;
+}
+
+.gridRow {
+    background-color: lightblue;
+}
+
+.singlePanel{
+    margin-bottom: 20px;
+    margin-left: 10%;
+    width: 80%;
+    padding-bottom: 120%;
+    background-color: lightblue;
+
+}
