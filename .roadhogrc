@@ -13,6 +13,14 @@
         "extraBabelPlugins": [
             "transform-runtime",
             ["import", {"libraryName": "antd", "style": true}]
-        ]
+        ],
+        "extraBabelPlugins": [
+        -    "transform-runtime"
+        +    "transform-runtime",
+        +    ["import", { "libraryName": "antd", "style": "css" }]
+          ]
+    },
+    "theme": {
+      "primary-color": "#d3e8e8",
     }
 }
