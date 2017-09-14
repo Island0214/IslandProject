@@ -1,12 +1,38 @@
 //Greeter,js
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom';
-import config from './config.json';
 import styles from './nav.css';//导入
 import {Navbar, Nav, NavItem, NavDropdown, MenuItem, FormGroup, FormControl} from "react-bootstrap";
-import IconButton from 'material-ui/IconButton';
-import {Button} from 'antd';
+import {Button, Cascader} from 'antd';
 // import 'antd/lib/button/style/css';
+
+const options = [{
+    value: 'zhejiang',
+    label: 'Zhejiang',
+    children: [{
+        value: 'hangzhou',
+        label: 'Hangzhou',
+        children: [{
+            value: 'xihu',
+            label: 'West Lake',
+        }],
+    }],
+}, {
+    value: 'jiangsu',
+    label: 'Jiangsu',
+    children: [{
+        value: 'nanjing',
+        label: 'Nanjing',
+        children: [{
+            value: 'zhonghuamen',
+            label: 'Zhong Hua Men',
+        }],
+    }],
+}];
+
+function onChange(value) {
+    console.log(value);
+}
 
 class MyNav extends Component{
     render() {
@@ -41,20 +67,27 @@ class MyNav extends Component{
                             {/*<Button type="dashed" shape="circle" icon="search" className={styles.navSearchButton}/>*/}
                             {/*/!*<Button type="submit">Submit</Button>*!/*/}
                         {/*</Navbar.Form>*/}
-                        <Navbar.Form pullLeft>
-                            <FormGroup>
-                                <FormControl type="text" placeholder="Search" />
-                            </FormGroup>
+                        <Navbar.Form pullLeft className={styles.navBar}>
+                            {/*<FormGroup>*/}
+                                {/*<FormControl type="text" placeholder="Search" />*/}
+                            {/*</FormGroup>*/}
+                            <Cascader  className={styles.cascader}
+                                options={options}
+                                onChange={onChange}
+                                placeholder="Please select"
+                                showSearch
+                            />
+                            <Button type="dashed" shape="circle" icon="search" className={styles.navSearchButton}/>
 
                             {/*<Button type="submit">Submit</Button>*/}
                         </Navbar.Form>
                         {/*<NavItem eventKey={1} href="#" className={styles.menuItem}>*/}
 
                         {/*</NavItem>*/}
-                        <NavItem eventKey={2} href="#">
-                            <Button type="dashed" shape="circle" icon="search" className={styles.navSearchButton}/>
+                        {/*<NavItem eventKey={2} href="#">*/}
+                            {/*<Button type="dashed" shape="circle" icon="search" className={styles.navSearchButton}/>*/}
 
-                        </NavItem>
+                        {/*</NavItem>*/}
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
