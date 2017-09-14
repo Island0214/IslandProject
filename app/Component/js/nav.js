@@ -35,6 +35,26 @@ function onChange(value) {
 }
 
 class MyNav extends Component{
+    showMainView() {
+        console.log('Clicked!');
+        alert('clicked1');
+    }
+
+    showUIView() {
+        console.log('Clicked!');
+        alert('clicked2');
+    }
+
+    showWorkView() {
+        console.log('Clicked!');
+        alert('clicked3');
+    }
+
+    showContactView() {
+        console.log('Clicked!');
+        alert('clicked4');
+    }
+
     render() {
         return (
             <Navbar collapseOnSelect className={styles.bg}>
@@ -46,10 +66,10 @@ class MyNav extends Component{
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav>
-                        <NavItem eventKey={1} href="#" className={styles.menuItem}>首页</NavItem>
-                        <NavItem eventKey={2} href="#" className={styles.menuItem}>UI</NavItem>
-                        <NavItem eventKey={3} href="#" className={styles.menuItem}>项目</NavItem>
-                        <NavItem eventKey={4} href="#" className={styles.menuItem}>联系</NavItem>
+                        <NavItem eventKey={1} href="#" className={styles.menuItem} onClick={this.showMainView}>首页</NavItem>
+                        <NavItem eventKey={2} href="#" className={styles.menuItem} onClick={() => this.showUIView()}>UI</NavItem>
+                        <NavItem eventKey={3} href="#" className={styles.menuItem} onClick={() => this.showWorkView()}>项目</NavItem>
+                        <NavItem eventKey={4} href="#" className={styles.menuItem} onClick={() => this.showContactView()}>联系</NavItem>
                         {/*<NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">*/}
                             {/*<MenuItem eventKey={3.1}>UI</MenuItem>*/}
                             {/*<MenuItem eventKey={3.2}>项目</MenuItem>*/}
@@ -94,7 +114,6 @@ class MyNav extends Component{
         );
     }
 }
-
 
 
 export default MyNav
