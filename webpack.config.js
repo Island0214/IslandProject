@@ -1,6 +1,8 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+var path = require('path');
+
 var providePlugin = new webpack.ProvidePlugin({
     $: 'jquery',
     jQuery: 'jquery',
@@ -45,6 +47,16 @@ module.exports = {
                     }
                 ]
             },
+            {
+                test: /\.js?$/,
+                loader: 'babel-loader',
+                query: {
+                    presets: [require.resolve('babel-preset-es2015'), 'react', 'stage-2'],
+                    plugins: [require.resolve('babel-plugin-transform-runtime')]
+                },
+                exclude: /node_modules/,
+            },
+
             // ,
             // {
             //     test: /\.module\.less$/,
@@ -107,7 +119,8 @@ module.exports = {
             {
                 test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
                 use: 'url-loader?limit=10000&mimetype=image/svg+xml'
-            },
+            }
+
             // {
             //     test: require.resolve('jquery'),
             //     loader: 'expose?$!expose?jQuery', // 先把jQuery对象声明成为全局变量`jQuery`，再通过管道进一步又声明成为全局变量`$`
