@@ -43,6 +43,8 @@ class HelloTitle extends React.Component{
 
 render(<MyNav />, document.getElementById('nav'));
 render(<MainPart />, document.getElementById('panelPart'));
-
-
 render(<HelloTitle />, document.getElementById('headTitle'));
+
+function showUIView() {
+    
+}
