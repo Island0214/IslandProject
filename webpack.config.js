@@ -93,12 +93,12 @@ module.exports = {
         //     },
             {test: /\.less$/, loader: 'style-loader!css-loader!less-loader'},
             {
-                test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-                use: 'url-loader?limit=100000'
+                test: /\.(woff|woff2|eot|ttf|svg)$/,
+                use: 'url-loader?limit=8192!./file.png'
             },
             {
                 test: /\.png$/,
-                use: 'url-loader?limit=100000'
+                use: 'file-loader'
             },
             {
                 test: /\.jpg$/,

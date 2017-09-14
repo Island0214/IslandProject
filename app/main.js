@@ -1,13 +1,13 @@
 //main.js
 import '!style-loader!css-loader!bootstrap/dist/css/bootstrap.css';
-import style from './Component/main.css';//使用require导入css文件
+import style from './Component/css/main.css';//使用require导入css文件
 import 'antd/dist/antd.less';
 
 import React from 'react';
 import {render} from 'react-dom';
-import MyNav from './Component/nav.js';
-import MainPart from './Component/mainPart.js';
-import Panel from './Component/panel.js';
+import MyNav from './Component/js/nav.js';
+import MainPart from './Component/js/mainPart.js';
+import Panel from './Component/js/panel.js';
 import QueueAnim from 'rc-queue-anim';
 
 

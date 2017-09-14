@@ -11,7 +11,8 @@
     "precss": "^2.0.0",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.3",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "request": "^2.79.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.4",

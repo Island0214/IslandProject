@@ -1,0 +1,83 @@
+/* main.css */
+html {
+    box-sizing: border-box;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    /*background-color: #bbe4d2;*/
+    background-color: #D5E8D5;
+    height: auto;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    padding: 0;
+    margin: 0;
+}
+
+.titleP {
+    width: 100%;
+    text-align: center;
+    /* margin: 0; */
+    padding: 0;
+    font-size: 48px;
+    color: #D5E8D5;
+    font-weight: 300;
+    letter-spacing: 10px;
+    padding-bottom: 10px;
+    text-shadow: 2px 2px 1px #9bc7ca;
+
+}
+
+.gridRow {
+    background-color: lightblue;
+}
+
+.singlePanel{
+    box-shadow: 10px 10px 3px #a1c1ca;
+    margin-bottom: 60px;
+    margin-left: 10%;
+    width: 80%;
+    padding-bottom: 20%;
+    padding-top: 20%;
+    top: 10%;
+    background-color: lightblue;
+
+}
+
+.singlePanel .card {
+    margin-left: 15%;
+    /*margin-top: 10%;*/
+    width: 70%;
+    padding-bottom: 10%;
+    background-color: #e7eeee;
+}
+
+.singlePanel .card img {
+    width: 100%;
+    /*box-shadow: 4px 4px 2px #a1c1ca;*/
+}
+
+.singlePanel .card p{
+    font-size: 36px;
+    font-weight: 400;
+    color: #92c6a3;
+    width: 100%;
+    text-align: center;
+    margin-top: 3%;
+    letter-spacing: 10px;
+    text-shadow: 2px 2px 1px #659b7f;
+
+}
