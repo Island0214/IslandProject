@@ -1,0 +1,149 @@
+/* main.css */
+html {
+    box-sizing: border-box;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    /*background-color: #bbe4d2;*/
+    background-color: #D5E8D5;
+    height: auto;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    padding: 0;
+    margin: 0;
+}
+
+.titleP {
+    width: 100%;
+    text-align: center;
+    /* margin: 0; */
+    padding: 0;
+    font-size: 48px;
+    color: #D5E8D5;
+    font-weight: 300;
+    letter-spacing: 10px;
+    padding-bottom: 10px;
+    text-shadow: 2px 2px 1px #9bc7ca;
+
+}
+
+.gridRow {
+    background-color: lightblue;
+}
+
+.singlePanel{
+    box-shadow: 10px 10px 3px #a1c1ca;
+    margin-bottom: 65px;
+    margin-left: 10%;
+    width: 80%;
+    padding-bottom: 100%;
+    padding-top: 20%;
+    margin-top: -10%;
+    /*margin-bottom: 10%;*/
+    background-color: lightblue;
+    position: relative;
+
+}
+
+.singlePanel .card {
+    margin-left: 15%;
+    /*margin-top: 10%;*/
+    width: 70%;
+    padding-bottom: 100%;
+    background-color: #e7eeee;
+    position: absolute;
+
+}
+
+.singlePanel .card img {
+    width: 100%;
+    /*box-shadow: 4px 4px 2px #a1c1ca;*/
+    transition: transform 1s;
+    position: absolute;
+}
+
+
+
+
+.singlePanel .card p{
+    position: absolute;
+    font-size: 36px;
+    font-weight: 400;
+    color: #92c6a3;
+    width: 103%;
+    text-align: center;
+    margin-top: 100%;
+    letter-spacing: 10px;
+    text-shadow: 2px 2px 1px #659b7f;
+    transition: transform 1s;
+    transform: translate(0px,0px);
+}
+
+.singlePanel .card .info {
+    position: absolute;
+    margin-top: 10%;
+    /*padding-bottom: 10%;*/
+    margin-left: 10%;
+    width: 80%;
+    /*padding-bottom: 100%;*/
+    background-color: #ffffff;
+    /*box-shadow: 4px 4px 2px #a1c1ca;*/
+    transition: transform 1s;
+}
+
+.singlePanel .card .info p{
+    /*margin-top: 20%;*/
+    position: absolute;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 100%;
+    text-align: center;
+    /*padding-bottom: 100%;*/
+    color: #92c6a3;
+    letter-spacing: 3px;
+    font-size: 16px;
+    font-weight: 300;
+    /*box-shadow: 4px 4px 2px #a1c1ca;*/
+    transition: none;
+    text-shadow: none;
+    transform: none;
+    white-space: normal;
+    word-break: break-all;
+}
+
+.singlePanel .card:hover .info p{
+    transform: none;
+}
+
+/*!*当鼠标滑过外部容器figure的时候改变p标签和h2标签的位置*!*/
+/*.singlePanel .card p:hover{*/
+    /*transform: translate(0px,-200px);*/
+/*}*/
+
+/*当鼠标滑过外部容器figure的时候改变p标签和h2标签的位置*/
+.singlePanel .card:hover img{
+    transform: translate(0px,-200px);
+}
+
+.singlePanel .card:hover p{
+    transform: translate(0px,-300%);
+}
+
+/*!*当鼠标滑过外部容器figure的时候改变p标签和h2标签的位置*!*/
+/*.singlePanel .card img:hover{*/
+    /*transform: translate(0px,0px);*/
+/*}*/
