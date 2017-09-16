@@ -31,34 +31,16 @@ export default (state = initialState, action) => {
 
     switch (action.type) {
 
-        case 'apple/BEGIN_PICK_APPLE':
+        case 'nav/ShowMain':
 
             /** 将isPicking设置true */
-            return fromJS(state).set('isPicking', true).toJS();
+            return fromJS(state).set('showMain', true).toJS();
 
-        case 'apple/DONE_PICK_APPLE':
+        case 'nav/hideMain':
 
-            let newApple =  {
-                id: state.newAppleId,
-                weight: action.payload,
-                isEaten: false
-            };
+            /** 将isPicking设置true */
+            return fromJS(state).set('showMain', false).toJS();
 
-            /** 在apples中新增一个newApple， 将newAppleId增加1， 将isPicking设为false*/
-            return fromJS(state).update('apples', list => list.push(newApple))
-                .set('newAppleId', state.newAppleId + 1)
-                .set('isPicking', false)
-                .toJS();
-
-        case 'apple/FAIL_PICK_APPLE':
-
-            /** 将isPicking设置false */
-            return fromJS(state).set('isPicking', false).toJS();
-
-        case 'apple/EAT_APPLE':
-
-            /** 将id对应索引值的数组的isEaten设为true,表示已吃*/
-            return fromJS(state).setIn(['apples', action.payload, 'isEaten'], true).toJS();
 
         default:
             return state;

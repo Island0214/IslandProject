@@ -1,10 +1,11 @@
 //Greeter,js
 import React, {Component} from 'react'
-import ReactDOM from 'react-dom';
 import styles from '../css/nav.css';//导入
 import {Navbar, Nav, NavItem, NavDropdown, MenuItem, FormGroup, FormControl} from "react-bootstrap";
 import {Button, Cascader} from 'antd';
-// import 'antd/lib/button/style/css';
+import actions from '../redux/actions/UIFrameAction'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux';
 
 const options = [{
     value: 'zhejiang',
@@ -35,12 +36,14 @@ function onChange(value) {
 }
 
 class MyNav extends Component{
+
     showMainView() {
+        // dispatch(actions.pickApple());
         alert('clicked1');
     }
 
     showUIView() {
-        hideMain();
+        // hideMain();
         alert('clicked2');
     }
 
@@ -53,6 +56,8 @@ class MyNav extends Component{
     }
 
     render() {
+        let { state, actions } = this.props;
+
         return (
             <Navbar collapseOnSelect className={styles.bg}>
                 <Navbar.Header>
@@ -63,8 +68,8 @@ class MyNav extends Component{
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav>
-                        <NavItem eventKey={1} href="#" className={styles.menuItem} onClick={this.showMainView}>首页</NavItem>
-                        <NavItem eventKey={2} href="#" className={styles.menuItem} onClick={() => this.showUIView()}>UI</NavItem>
+                        <NavItem eventKey={1} href="#" className={styles.menuItem} onClick={actions.showMainView} >首页</NavItem>
+                        <NavItem eventKey={2} href="#" className={styles.menuItem} onClick={actions.hideMainView}>UI</NavItem>
                         <NavItem eventKey={3} href="#" className={styles.menuItem} onClick={() => this.showWorkView()}>项目</NavItem>
                         <NavItem eventKey={4} href="#" className={styles.menuItem} onClick={() => this.showContactView()}>联系</NavItem>
                         {/*<NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">*/}
@@ -112,5 +117,16 @@ class MyNav extends Component{
     }
 }
 
+function selectState(state) {
+    return {
+        state: state.uiFrameReducer
+    }
+}
 
-export default MyNav
+function buildActionDispatcher(dispatch) {
+    return {
+        actions: bindActionCreators(actions, dispatch)
+    }
+}
+
+export default connect(selectState, buildActionDispatcher)(MyNav);

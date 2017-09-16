@@ -3,7 +3,7 @@ import uiFrameReducer from './UIFrameReducer';
 
 
 const rootReducer = combineReducers({
-    appleBasket: uiFrameReducer
+    uiFrameReducer: uiFrameReducer
 });
 
 export default rootReducer;

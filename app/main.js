@@ -12,24 +12,24 @@ import QueueAnim from 'rc-queue-anim';
 
 import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom'
-import {  createStore, applyMiddleware   } from 'redux'
+import {createStore, applyMiddleware} from 'redux'
 import thunk from 'redux-thunk';
-import { Provider } from 'react-redux'
+import {Provider} from 'react-redux'
 import reducer from './components/redux/reducers';
 
 
-
-class HelloTitle extends React.Component{
+class HelloTitle extends React.Component {
     state = {
         show: true,
     };
+
     render() {
         return (
             <div className="queue-demo">
                 <QueueAnim className="demo-content" delay={100}
                            animConfig={[
-                               { opacity: [1, 0], translateY: [0, 50] },
-                               { opacity: [1, 0], translateY: [0, -50] }
+                               {opacity: [1, 0], translateY: [0, 50]},
+                               {opacity: [1, 0], translateY: [0, -50]}
                            ]}>
                     {this.state.show ? [
                         <p key="0" className={style.titleP}>ISLAND<br/>PROJECT</p>
@@ -39,6 +39,7 @@ class HelloTitle extends React.Component{
         );
     }
 }
+
 //
 // const hideAction = { type: 'hide' };
 //
@@ -87,14 +88,18 @@ class HelloTitle extends React.Component{
 const store = createStore(reducer, applyMiddleware(thunk));
 
 
-render(<MyNav />, document.getElementById('nav'));
 render(
     <Provider store={store}>
-        <MainPart />
+        <MyNav/>
+    </Provider>
+    , document.getElementById('nav'));
+render(
+    <Provider store={store}>
+        <MainPart/>
     </Provider>
     , document.getElementById('panelPart'));
-render(<HelloTitle />, document.getElementById('headTitle'));
+render(<HelloTitle/>, document.getElementById('headTitle'));
 
 function showUIView() {
-    
+
 }
