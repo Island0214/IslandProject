@@ -105,53 +105,49 @@ class MainPart extends Component {
         return (
             <div>
                 {state.showMain ? [
-                        <div className="queue-demo">
-                            <QueueAnim className="demo-content" delay={0}
-                                       animConfig={[
-                                           {opacity: [1, 0], translateY: [0, 50]},
-                                           {opacity: [1, 0], translateX: [0, 500]}
-                                       ]}>
-                                <Grid>
-                                    <Row className="show-grid">
-                                        <div className="queue-demo">
-                                            {/*{state.showMain ? [*/}
-                                                    <QueueAnim className="demo-content" delay={500}
-                                                               animConfig={[
-                                                                   {opacity: [1, 0], translateY: [0, 50]},
-                                                                   {opacity: [1, 0], translateY: [0, -50]}
-                                                               ]}>
-                                                        <Col xs={12} sm={12} md={4} lg={4} key="1"><br/>
-                                                            <Card name="不知道" src="icon1" content="Sadasf"/>
-                                                        </Col>
-                                                        {/*<Col sm={6} md={3}><code>&lt;{'Col sm={6} md={3}'} /&gt;</code><br/>{dummySentences.slice(0, 4).join(' ')}</Col>*/}
-                                                        {/*<Clearfix visibleSmBlock></Clearfix>*/}
-                                                        <Col xs={12} sm={12} md={4} lg={4} key="2"><br/>
-                                                            <Card name="不明了" src="icon2"/>
-                                                        </Col>
-                                                        {/*<Clearfix visibleSmBlock></Clearfix>*/}
-                                                        <Col xs={12} sm={12} md={4} lg={4} key="3"><br/>
-                                                            <Card name="不想要" src="icon3"/>
+                    <div className="queue-demo">
+                        <QueueAnim className="demo-content" delay={0}
+                                   animConfig={[
+                                       {opacity: [1, 0], translateY: [0, 50]},
+                                       {opacity: [1, 0], translateX: [0, 500]}
+                                   ]}>
+                            <Grid>
+                                <Row className="show-grid">
+                                    <div className="queue-demo">
+                                        <QueueAnim className="demo-content" delay={500}
+                                                   animConfig={[
+                                                       {opacity: [1, 0], translateY: [0, 50]},
+                                                       {opacity: [1, 0], translateY: [0, -50]}
+                                                   ]}>
+                                            <Col xs={12} sm={12} md={4} lg={4} key="1"><br/>
+                                                <Card name="不知道" src="icon1" content="Sadasf"/>
+                                            </Col>
+                                            {/*<Col sm={6} md={3}><code>&lt;{'Col sm={6} md={3}'} /&gt;</code><br/>{dummySentences.slice(0, 4).join(' ')}</Col>*/}
+                                            {/*<Clearfix visibleSmBlock></Clearfix>*/}
+                                            <Col xs={12} sm={12} md={4} lg={4} key="2"><br/>
+                                                <Card name="不明了" src="icon2"/>
+                                            </Col>
+                                            {/*<Clearfix visibleSmBlock></Clearfix>*/}
+                                            <Col xs={12} sm={12} md={4} lg={4} key="3"><br/>
+                                                <Card name="不想要" src="icon3"/>
 
-                                                        </Col>
-                                                    </QueueAnim>
-                                                // ]: null}
-                                        </div>
-                                    </Row>
-                                    {/*<Row className="show-grid">*/}
-                                    {/*<Col xs={12} sm={12} md={6} lg={6}><br/></Col>*/}
-                                    {/*/!*<Col sm={6} md={3}><code>&lt;{'Col sm={6} md={3}'} /&gt;</code><br/>{dummySentences.slice(0, 4).join(' ')}</Col>*!/*/}
-                                    {/*<Clearfix visibleSmBlock></Clearfix>*/}
-                                    {/*<Col xs={6} sm={6} md={3} lg={3}><br/>b</Col>*/}
-                                    {/*<Col xs={6} sm={6} md={3} lg={3}><br/>c</Col>*/}
-                                    {/*</Row>*/}
-                                </Grid>
-                            </QueueAnim>
-                        </div>
-                    ] :
-                    null}
+                                            </Col>
+                                        </QueueAnim>
+                                    </div>
+                                </Row>
+                                {/*<Row className="show-grid">*/}
+                                {/*<Col xs={12} sm={12} md={6} lg={6}><br/></Col>*/}
+                                {/*/!*<Col sm={6} md={3}><code>&lt;{'Col sm={6} md={3}'} /&gt;</code><br/>{dummySentences.slice(0, 4).join(' ')}</Col>*!/*/}
+                                {/*<Clearfix visibleSmBlock></Clearfix>*/}
+                                {/*<Col xs={6} sm={6} md={3} lg={3}><br/>b</Col>*/}
+                                {/*<Col xs={6} sm={6} md={3} lg={3}><br/>c</Col>*/}
+                                {/*</Row>*/}
+                            </Grid>
+                        </QueueAnim>
+                    </div>
+                ] : null}
             </div>
-
-        );
+        )
     }
 }
 
