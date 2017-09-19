@@ -20,9 +20,11 @@ let actions = {
 
     hideMainView: () => ({
         type: 'nav/hideMain',
-        payload: false
+        payload: true
     }),
+    showLeftNav: () => ({
 
+    })
 };
 
 export default actions;
