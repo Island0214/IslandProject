@@ -147,3 +147,29 @@ a{
 /*.singlePanel .card img:hover{*/
     /*transform: translate(0px,0px);*/
 /*}*/
+
+.mainPart {
+    width: 100%;
+    height: 100%;
+}
+
+.sideBar {
+    /*background: #fff; border-right: 1px solid #e9e9e9; overflow-x: hidden; overflow-y: auto;*/
+    position: relative;
+    top: -18px; /*???*/
+    left: 0;
+    width: 100%;
+    bottom: 25px;
+    z-index: 10;
+    /*background-color: lightblue;*/
+    height: 100%;
+    padding-bottom: 1000%;
+}
+
+.content {
+    background-color: #ffffff00;
+    padding-bottom: 1000%;
+    z-index: 10;
+    position: relative;
+    top: -18px;
+}

@@ -6,6 +6,7 @@ import 'antd/dist/antd.less';
 import React from 'react';
 import {render} from 'react-dom';
 import MyNav from './components/js/nav.js';
+import ContentPart from './components/js/contentPart.js';
 import MainPart from './components/js/mainPart.js';
 import Panel from './components/js/panel.js';
 import QueueAnim from 'rc-queue-anim';
@@ -40,51 +41,6 @@ class HelloTitle extends React.Component {
     }
 }
 
-//
-// const hideAction = { type: 'hide' };
-//
-//
-// // Reducer
-// function hideMain(state = { active: true }, action) {
-//     const active = state.active;
-//     switch (action.type) {
-//         case 'hide':
-//             return { active: false}
-//         default:
-//             return state
-//     }
-// }
-//
-// // Store
-// const store = createStore(hideMain);
-//
-// // Map Redux state to component props
-// function mapStateToProps(state) {
-//     return {
-//         value: state.active
-//     }
-// }
-//
-// // Map Redux actions to component props
-// function mapDispatchToProps(dispatch) {
-//     return {
-//         hideMain: () => dispatch(hideAction)
-//     }
-// }
-//
-// // Connected Component
-// const App = connect(
-//     mapStateToProps,
-//     mapDispatchToProps
-// )(MainPart, MyNav);
-
-// ReactDOM.render(
-//     <Provider store={store}>
-//         <App />
-//     </Provider>,
-//     document.getElementById('panelPart')
-// );
-
 const store = createStore(reducer, applyMiddleware(thunk));
 
 
@@ -99,7 +55,8 @@ render(
     </Provider>
     , document.getElementById('panelPart'));
 render(<HelloTitle/>, document.getElementById('headTitle'));
-
+render(<HelloTitle/>, document.getElementById('headTitle'));
+render(<ContentPart />, document.getElementById('contentPart'));
 function showUIView() {
 
 }
