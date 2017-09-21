@@ -15,7 +15,7 @@ class LeftNav extends Component{
         return (
             <Menu
                 onClick={this.handleClick}
-                style={{ width: '100%',  }}
+                style={{ width: '100%', border: 'none' }}
                 defaultSelectedKeys={['1']}
                 defaultOpenKeys={['sub1']}
                 mode="inline"

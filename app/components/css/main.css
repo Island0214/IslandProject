@@ -163,13 +163,20 @@ a{
     z-index: 10;
     /*background-color: lightblue;*/
     height: 100%;
-    padding-bottom: 1000%;
+    /*padding-bottom: 1000%;*/
 }
 
 .content {
     background-color: #ffffff00;
-    padding-bottom: 1000%;
+    /*padding-bottom: 1000%;*/
     z-index: 10;
     position: relative;
     top: -18px;
+    left: 0;
+    width: 100%;
+    bottom: 25px;
+    height: 100%;
+
+    padding-bottom: 1000%;
+
 }
