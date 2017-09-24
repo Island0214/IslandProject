@@ -56,7 +56,7 @@ render(
     , document.getElementById('panelPart'));
 render(<HelloTitle/>, document.getElementById('headTitle'));
 render(<HelloTitle/>, document.getElementById('headTitle'));
-render(<ContentPart />, document.getElementById('contentPart'));
+// render(<ContentPart />, document.getElementById('contentPart'));
 function showUIView() {
 
 }
