@@ -8,11 +8,7 @@ import {render} from 'react-dom';
 import MyNav from './components/js/nav.js';
 import ContentPart from './components/js/contentPart.js';
 import MainPart from './components/js/mainPart.js';
-import Panel from './components/js/panel.js';
 import QueueAnim from 'rc-queue-anim';
-
-import PropTypes from 'prop-types'
-import ReactDOM from 'react-dom'
 import {createStore, applyMiddleware} from 'redux'
 import thunk from 'redux-thunk';
 import {Provider} from 'react-redux'
@@ -49,14 +45,12 @@ render(
         <MyNav/>
     </Provider>
     , document.getElementById('nav'));
+
 render(
     <Provider store={store}>
         <MainPart/>
     </Provider>
     , document.getElementById('panelPart'));
-render(<HelloTitle/>, document.getElementById('headTitle'));
+
 render(<HelloTitle/>, document.getElementById('headTitle'));
 // render(<ContentPart />, document.getElementById('contentPart'));
-function showUIView() {
-
-}
