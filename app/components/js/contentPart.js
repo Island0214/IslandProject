@@ -135,5 +135,17 @@ class ContentPart extends Component {
     }
 }
 
+function selectState(state) {
+    return {
+        state: state.uiFrameReducer
+    }
+}
 
-export default ContentPart
+function buildActionDispatcher(dispatch) {
+    return {
+        actions: bindActionCreators(actions, dispatch)
+    }
+}
+
+
+export default connect(selectState, buildActionDispatcher)(ContentPart)

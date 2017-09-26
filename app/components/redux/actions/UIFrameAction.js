@@ -14,17 +14,38 @@ let actions = {
     },
 
     showMainView: () => ({
-        type: 'nav/ShowMain',
+        type: 'nav/showMain',
         payload: true
     }),
-
     hideMainView: () => ({
         type: 'nav/hideMain',
         payload: true
     }),
-    showLeftNav: () => ({
 
-    })
+    showUIView: () => ({
+        type: 'nav/showUI',
+        payload: true
+    }),
+    hideUIView: () => ({
+        type: 'nav/hideUI',
+        payload: true
+    }),
+    showContactView: () => ({
+        type: 'nav/showContact',
+        payload: true
+    }),
+    hideContactView: () => ({
+        type: 'nav/hideContact',
+        payload: true
+    }),
+    showProjectView: () => ({
+        type: 'nav/showProject',
+        payload: true
+    }),
+    hideProjectView: () => ({
+        type: 'nav/hideProject',
+        payload: true
+    }),
 };
 
 export default actions;
