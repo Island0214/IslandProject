@@ -50,50 +50,53 @@ class ContentPart extends Component {
 
             <Grid className={styles.mainPart}>
                 {/*<Row className="show-grid">*/}
-                {state.showUI ? [
 
                 <Row className="show-grid demo-tbody" style={{padding: 0}} key="row">
                     {/*<div className="queue-demo">*/}
 
-                        <QueueAnim delay={500}
-                                   animConfig={[
-                                       {opacity: [1, 0], translateX: [0, -50]},
-                                       {opacity: [1, 0], translateX: [0, -50]}
-                                   ]}
-                                   interval={500}
-                                   duration={1000}
-                        >
-                            {this.state.windowSize ? [
-                                <Col xs={12} sm={12} md={2} lg={2} key="1" className="demo-thead" style={{
-                                    padding: 0,
-                                    position: 'fixed',
-                                    overflow: 'auto',
-                                    top: '50px',
-                                    bottom: '15px',
-                                    backgroundColor: '#ffffff',
-                                    borderRight: '5px solid #d3e8e8',
-                                    borderBottom: '5px solid #d3e8e8'
-                                }}><br/>
-                                    <div className={styles.sideBar}>
-                                        <LeftNav/>
-                                    </div>
-                                </Col>
-                            ] : [
-                                <Col xs={12} sm={12} md={2} lg={2} key="1" className="demo-thead" style={{
-                                    padding: 0,
-                                    position: 'static',
-                                    overflow: 'auto',
-                                    backgroundColor: '#ffffff',
-                                    borderRight: '5px solid #d3e8e8'
-                                }}><br/>
-                                    <div className={styles.sideBar}>
-                                        <LeftNav/>
-                                    </div>
-                                </Col>
-                            ]
-                            }
+                    <QueueAnim delay={500}
+                               animConfig={[
+                                   {opacity: [1, 0], translateX: [0, -50]},
+                                   {opacity: [1, 0], translateX: [0, -50]}
+                               ]}
+                               interval={500}
+                               duration={1000}
+                    >
+                        {this.state.windowSize == true && state.showUI == true ? [
+                            <Col xs={12} sm={12} md={2} lg={2} key="1" className="demo-thead" style={{
+                            padding: 0,
+                            position: 'fixed',
+                            overflow: 'auto',
+                            top: '50px',
+                            bottom: '15px',
+                            backgroundColor: '#ffffff',
+                            borderRight: '5px solid #d3e8e8',
+                            borderBottom: '5px solid #d3e8e8'
+                        }}><br/>
+                            <div className={styles.sideBar}>
+                            <LeftNav/>
+                            </div>
+                            </Col>
+                            ] : null
+                        }
 
-                        </QueueAnim>
+                        {this.state.windowSize == false && state.showUI == true ? [
+                            <Col xs={12} sm={12} md={2} lg={2} key="1" className="demo-thead" style={{
+                            padding: 0,
+                            position: 'static',
+                            overflow: 'auto',
+                            backgroundColor: '#ffffff',
+                            borderRight: '5px solid #d3e8e8'
+                        }}><br/>
+                            <div className={styles.sideBar}>
+                            <LeftNav/>
+                            </div>
+                            </Col>
+                            ] : [
+                            null
+                            ]
+                        }
+                    </QueueAnim>
 
                     {/*<QueueAnim delay={200}*/}
                     {/*animConfig={[*/}
@@ -111,34 +114,36 @@ class ContentPart extends Component {
                                interval={500}
                                duration={1000}
                     >
-                    {this.state.windowSize ? [
-                        <Col xs={12} sm={12} md={10} lg={10} key="2" className="demo-thead" style={{
-                            padding: 0,
-                            position: 'fixed',
-                            overflow: 'auto',
-                            top: '50px',
-                            bottom: '15px',
-                            backgroundColor: '#ffffff',
-                            right: '0'
-                        }}><br/>
-                            <div className={styles.content}></div>
-                        </Col>
-                    ] : [
-                        <Col xs={12} sm={12} md={10} lg={10} key="1" className="demo-thead" style={{
-                            padding: 0,
-                            position: 'static',
-                            overflow: 'auto',
-                            backgroundColor: '#ffffff',
-                        }}><br/>
-                            <div className={styles.content}></div>
-                        </Col>
-                    ]
-                    }
+                        {this.state.windowSize == true && state.showUI == true ? [
+                            <Col xs={12} sm={12} md={10} lg={10} key="2" className="demo-thead" style={{
+                                padding: 0,
+                                position: 'fixed',
+                                overflow: 'auto',
+                                top: '50px',
+                                bottom: '15px',
+                                backgroundColor: '#ffffff',
+                                right: '0'
+                            }}><br/>
+                                <div className={styles.content}></div>
+                            </Col>
+                        ] : null
+                        }
+
+                        {this.state.windowSize == false && state.showUI == true ? [
+                            <Col xs={12} sm={12} md={10} lg={10} key="1" className="demo-thead" style={{
+                                padding: 0,
+                                position: 'static',
+                                overflow: 'auto',
+                                backgroundColor: '#ffffff',
+                            }}><br/>
+                                <div className={styles.content}></div>
+                            </Col>
+                        ] : null
+                        }
                     </QueueAnim>
 
 
                 </Row>
-                ] : null}
 
             </Grid>
 

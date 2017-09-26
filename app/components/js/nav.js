@@ -79,10 +79,10 @@ class MyNav extends Component{
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav>
-                        <NavItem eventKey={1} href="#" className={styles.menuItem} onClick={showMainView} >首页</NavItem>
-                        <NavItem eventKey={2} href="#" className={styles.menuItem} onClick={showUIView}>UI</NavItem>
-                        <NavItem eventKey={3} href="#" className={styles.menuItem} onClick={showProjectView}>项目</NavItem>
-                        <NavItem eventKey={4} href="#" className={styles.menuItem} onClick={showContactView}>联系</NavItem>
+                        <NavItem eventKey={1} href="#" className={styles.menuItem} onClick={showMainView} >HOME</NavItem>
+                        <NavItem eventKey={2} href="#" className={styles.menuItem} onClick={showUIView}>DESIGN</NavItem>
+                        <NavItem eventKey={3} href="#" className={styles.menuItem} onClick={showProjectView}>BLOG</NavItem>
+                        <NavItem eventKey={4} href="#" className={styles.menuItem} onClick={showContactView}>CONTACT</NavItem>
                         {/*<NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">*/}
                             {/*<MenuItem eventKey={3.1}>UI</MenuItem>*/}
                             {/*<MenuItem eventKey={3.2}>项目</MenuItem>*/}
