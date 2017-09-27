@@ -1,0 +1,115 @@
+:global(.details-switch-demo-wrapper) {
+    position: relative;
+    overflow: hidden;
+    height: 450px;
+    transition: background 1s;
+}
+
+:global(.details-switch-demo) {
+    margin: 40px auto;
+    width: 600px;
+    height: 370px;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+:global(.details-switch-demo-img-wrapper){
+    width: 50%;
+    display: inline-block;
+    height: 100%;
+}
+
+:global(.details-switch-demo-text-wrapper) {
+    width: 50%;
+    display: inline-block;
+    height: 100%;
+    /*margin-left: 25%;*/
+}
+
+:global(.details-switch-demo-pic),
+:global(.details-switch-demo-map) {
+    position: absolute;
+}
+
+:global(.details-switch-demo-pic) {
+    width: 220px;
+    top: 100px;
+    left: 40px;
+}
+
+:global(.details-switch-demo-map) {
+    width: 250px;
+    top: 60px;
+    left: 30px;
+}
+:global(.details-switch-demo-map.map2){
+    width: 200px;
+    left: 50px;
+}
+
+:global(.details-switch-demo-text-wrapper .banner-anim-elem) {
+    padding: 40px;
+}
+
+:global(.details-switch-demo-text-wrapper h1 ){
+    font-size: 18px;
+    margin: 5px auto;
+}
+
+:global(.details-switch-demo-text-wrapper em) {
+    height: 2px;
+    width: 60px;
+    border-radius: 2px;
+    display: block;
+}
+
+:global(.details-switch-demo-text-wrapper p ){
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+:global(.details-switch-demo-wrapper .anticon){
+    position: absolute;
+    font-size: 24px;
+    top: 50%;
+    margin-top: -12px;
+    cursor: pointer;
+}
+
+:global(.details-switch-demo-wrapper .anticon-left){
+    left: 5px;
+    z-index: 999;
+}
+
+:global(.details-switch-demo-wrapper .anticon-right){
+    right: 5px;
+}
+@media screen and (max-width: 414px) {
+    :global(.details-switch-demo) {
+        transform: scale(.6) translateX(12px);
+        transform-origin: left center;
+    }
+}
+@media screen and (max-width: 375px) {
+    :global(.details-switch-demo) {
+        transform: scale(.55) translateX(7px);
+    }
+}
+@media screen and (max-width: 320px) {
+    :global(.details-switch-demo) {
+        transform: scale(.46) translateX(12px);
+    }
+}
+
+:global(.banner-anim) {
+    position: relative;
+    overflow: hidden;
+    min-height: 100px;
+}
+
+/*:global(.banner-anim-elem){*/
+    /*!*position: relative!important;*!*/
+    /*width: 50%!important;*/
+/*}*/

@@ -6,9 +6,8 @@ import QueueAnim from 'rc-queue-anim';
 import actions from '../redux/actions/UIFrameAction'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux';
-
 import LeftNav from '../js/leftNav.js'
-
+import DetailSwitch from '../js/detailSwitch'
 class ContentPart extends Component {
     constructor(props) {
         super(props);
@@ -124,7 +123,9 @@ class ContentPart extends Component {
                                 backgroundColor: '#ffffff',
                                 right: '0'
                             }}><br/>
-                                <div className={styles.content}></div>
+                                <div className={styles.content}>
+                                    <DetailSwitch/>
+                                </div>
                             </Col>
                         ] : null
                         }

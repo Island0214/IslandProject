@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import ReactDOM from 'react-dom';
 import styles from '../css/main.css';//导入
 import {Grid, Row, Col, Clearfix} from "react-bootstrap";
 import QueueAnim from 'rc-queue-anim';
@@ -115,13 +114,12 @@ class MainPart extends Component {
                 {/*<Row className="show-grid">*/}
                 <div className="queue-demo">
 
-                    <QueueAnim className="demo-content" delay={200}
+                    <QueueAnim className="demo-content" delay={0}
                                animConfig={[
                                    {opacity: [1, 0], translateY: [0, 50]},
-                                   {opacity: [1, 0], translateY: [0, 500]}
+                                   {opacity: [1, 0], translateY: [0, 200]}
                                ]}
                                interval={400}
-                               duration={1000}
                     >
                         {state.showMain ? [
                             <Row className="show-grid demo-tbody" key="row">

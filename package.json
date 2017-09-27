@@ -38,6 +38,7 @@
     "performance-now": "^2.1.0",
     "postcss-loader": "^2.0.6",
     "prop-types": "^15.5.10",
+    "rc-banner-anim": "^0.5.16",
     "rc-queue-anim": "^1.2.2",
     "rc-tween-one": "^1.4.5",
     "react-redux": "^5.0.6",
