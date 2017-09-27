@@ -54,7 +54,7 @@ class ContentPart extends Component {
                 <Row className="show-grid demo-tbody" style={{padding: 0}} key="row">
                     {/*<div className="queue-demo">*/}
 
-                    <QueueAnim delay={500}
+                    <QueueAnim delay={300}
                                animConfig={[
                                    {opacity: [1, 0], translateX: [0, -50]},
                                    {opacity: [1, 0], translateX: [0, -50]}
@@ -106,7 +106,7 @@ class ContentPart extends Component {
                     {/*interval={500}*/}
                     {/*duration={1000}*/}
                     {/*>*/}
-                    <QueueAnim delay={500}
+                    <QueueAnim delay={300}
                                animConfig={[
                                    {opacity: [1, 0], translateX: [0, 500]},
                                    {opacity: [1, 0], translateX: [0, 500]}

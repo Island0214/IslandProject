@@ -25,7 +25,8 @@ class HelloTitle extends React.Component {
                            ]}>
                     {state.showMain ? [
                         <p key="0" className={styles.titleP}>ISLAND<br/>PROJECT</p>
-                    ] : null}
+                    ] : null
+                    }
                 </QueueAnim>
             </div>
         );
