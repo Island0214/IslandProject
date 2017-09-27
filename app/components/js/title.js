@@ -25,9 +25,14 @@ class HelloTitle extends React.Component {
                            ]}>
                     {state.showMain ? [
                         <p key="0" className={styles.titleP}>ISLAND<br/>PROJECT</p>
-                    ] : null
-                    }
+                    ] : [
+                        <p key="0" className={styles.titleP} style={{'opacity': '0'}}>ISLAND<br/>PROJECT</p>
+                    ]}
+
                 </QueueAnim>
+                {/*{!state.showMain ? [*/}
+                    {/*<p key="0" className={styles.titleP} style={{'opacity': '0'}}>ISLAND<br/>PROJECT</p>*/}
+                {/*] : null}*/}
             </div>
         );
     }

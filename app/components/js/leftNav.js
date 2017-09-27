@@ -62,32 +62,9 @@ class LeftNav extends Component {
                 mode="inline"
             >
                 <SubMenu key="sub1" title={<span><Icon type="gift"/><span>Icons</span></span>} id="iconsMenu">
-                    {/*<MenuItemGroup key="g1" title="Item 1">*/}
-                    {/*<Menu.Item key="1">Option 1</Menu.Item>*/}
-                    {/*<Menu.Item key="2">Option 2</Menu.Item>*/}
-                    {/*</MenuItemGroup>*/}
-                    {/*<MenuItemGroup key="g2" title="Item 2">*/}
-                    {/*<Menu.Item key="3">Option 3</Menu.Item>*/}
-                    {/*<Menu.Item key="4">Option 4</Menu.Item>*/}
-                    {/*<Menu.Item key="5">Option 4</Menu.Item>*/}
-                    {/*<Menu.Item key="6">Option 4</Menu.Item>*/}
-                    {/*<Menu.Item key="7">Option 4</Menu.Item>*/}
-                    {/*<Menu.Item key="84">Option 4</Menu.Item>*/}
-                    {/*<Menu.Item key="14">Option 4</Menu.Item>*/}
-                    {/*<Menu.Item key="41">Option 4</Menu.Item>*/}
-                    {/*<Menu.Item key="42">Option 4</Menu.Item>*/}
-                    {/*<Menu.Item key="44">Option 4</Menu.Item>*/}
-                    {/*<Menu.Item key="45">Option 4</Menu.Item>*/}
-                    {/*<Menu.Item key="46">Option 4</Menu.Item>*/}
-                    {/*<Menu.Item key="47">Option 4</Menu.Item>*/}
-                    {/*<Menu.Item key="49">Option 4</Menu.Item>*/}
-                    {/*<Menu.Item key="421">Option 4</Menu.Item>*/}
-                    {/*<SubMenu key="sub3" title="Submenu">*/}
-                    {/*<Menu.Item key="7">Option 7</Menu.Item>*/}
-                    {/*<Menu.Item key="8">Option 8</Menu.Item>*/}
-                    {/*</SubMenu>*/}
-                    {/*</MenuItemGroup>*/}
-                    {subMenus}
+                    <MenuItemGroup key="g1" title="100 Days">
+                        {subMenus}
+                    </MenuItemGroup>
                 </SubMenu>
                 <SubMenu key="sub2" title={<span><Icon type="rocket"/><span>Projects</span></span>}>
                     <Menu.Item key="5">Option 5</Menu.Item>
