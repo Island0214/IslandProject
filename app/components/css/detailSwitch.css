@@ -1,16 +1,20 @@
 :global(.details-switch-demo-wrapper) {
     position: relative;
     overflow: hidden;
-    height: 450px;
+    height: 300px;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 2%;
+    border-radius: 20px;
     transition: background 1s;
 }
 
 :global(.details-switch-demo) {
-    margin: 40px auto;
-    width: 600px;
-    height: 370px;
+    margin: 25px auto;
+    width: 500px;
+    height: 250px;
     background: #fff;
-    border-radius: 6px;
+    border-radius: 10px;
     overflow: hidden;
     position: relative;
 }
@@ -34,19 +38,19 @@
 }
 
 :global(.details-switch-demo-pic) {
-    width: 220px;
-    top: 100px;
-    left: 40px;
+    width: 250px;
+    top: 0px;
+    left: 0px;
 }
 
 :global(.details-switch-demo-map) {
-    width: 250px;
-    top: 60px;
-    left: 30px;
+    width: 166px;
+    top: 42px;
+    left: 42px;
 }
 :global(.details-switch-demo-map.map2){
-    width: 200px;
-    left: 50px;
+    width: 166px;
+    left: 42px;
 }
 
 :global(.details-switch-demo-text-wrapper .banner-anim-elem) {
@@ -54,8 +58,13 @@
 }
 
 :global(.details-switch-demo-text-wrapper h1 ){
-    font-size: 18px;
-    margin: 5px auto;
+    font-size: 30px;
+    margin-top: 66px;
+    font-family: 'Andale Mono', 'Helvetica';
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: grey;
+    margin-left: -10px;
 }
 
 :global(.details-switch-demo-text-wrapper em) {
@@ -63,6 +72,7 @@
     width: 60px;
     border-radius: 2px;
     display: block;
+    margin-left: -10px;
 }
 
 :global(.details-switch-demo-text-wrapper p ){

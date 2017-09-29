@@ -8,38 +8,41 @@ import style from '../css/detailSwitch.css';
 
 const Element = BannerAnim.Element;
 
-const textData = {
-    content: 'Taiwan called motorcycle, motor bike [1] or a motorcycle,' +
-    ' the motorcycle referred to in the mainland, ' +
-    'Hong Kong and Southeast Asia known as motorcycles [2], ' +
-    'is a driven by the engine, ' +
-    'operated by a hand or two directions three-wheeled vehicles, is a means of transport. ' +
-    'In some military or police applications, will add a side compartment and a secondary wheel, ' +
-    'become a special three-wheeled motorcycle, mobility Zheyi common plug-in auxiliary wheels.',
-    title: 'Motorcycle',
-};
+// const textData = {
+//     content: 'Taiwan called motorcycle, motor bike [1] or a motorcycle,' +
+//     ' the motorcycle referred to in the mainland, ' +
+//     'Hong Kong and Southeast Asia known as motorcycles [2], ' +
+//     'is a driven by the engine, ' +
+//     'operated by a hand or two directions three-wheeled vehicles, is a means of transport. ' +
+//     'In some military or police applications, will add a side compartment and a secondary wheel, ' +
+//     'become a special three-wheeled motorcycle, mobility Zheyi common plug-in auxiliary wheels.',
+//     title: 'Appliances',
+// };
 
 let dataArray = [
     {
-        pic: 'https://zos.alipayobjects.com/rmsportal/ogXcvssYXpECqKG.png',
+        pic: 'appliance',
         map: 'https://zos.alipayobjects.com/rmsportal/HfBaRfhTkeXFwHJ.png',
-        color: '#FFF43D',
-        background: '#F6B429',
+        color: '#BCCEF7',
+        background: '#E1F4F8',
+        title: 'Appliances'
     },
     {
-        pic: 'https://zos.alipayobjects.com/rmsportal/iCVhrDRFOAJnJgy.png',
+        pic: 'vegetable',
         map: 'https://zos.alipayobjects.com/rmsportal/XRfQxYENhzbfZXt.png',
-        color: '#FF4058',
-        background: '#FC1E4F',
+        color: '#98C9DF',
+        background: '#F8F6E1',
+        title: 'Vegetables'
     },
     {
-        pic: 'https://zos.alipayobjects.com/rmsportal/zMswSbPBiQKvARY.png',
+        pic: 'pattern',
         map: 'https://zos.alipayobjects.com/rmsportal/syuaaBOvttVcNks.png',
-        color: '#9FDA7F',
-        background: '#64D487',
+        color: '#FFF1CC',
+        background: '#F8E1EC',
+        title: 'Patterns'
     },
 ];
-dataArray = dataArray.map(item => ({...item, ...textData}));
+// dataArray = dataArray.map(item => ({...item, ...textData}));
 
 class DetailSwitch extends React.Component {
     static propTypes = {
@@ -118,10 +121,10 @@ class DetailSwitch extends React.Component {
                     key="img-wrapper"
                 >
                     <div className={`${this.props.className}-map map${i}`} key="map">
-                        <img src={item.map} width="100%"/>
+                        <img width="100%" style={{background: item.background, paddingBottom: '100%', borderRadius: '50%'}}/>
                     </div>
                     <div className={`${this.props.className}-pic pic${i}`} key="pic">
-                        <img src={item.pic} width="100%"/>
+                        <img src={require('../images/' + item.pic + '.png')} width="100%"/>
                     </div>
                 </QueueAnim>
             </Element>);
@@ -131,7 +134,7 @@ class DetailSwitch extends React.Component {
                 <QueueAnim type="bottom" duration={1000} delay={[!i ? this.state.delay + 500 : 800, 0]}>
                     <h1 key="h1">{title}</h1>
                     <em key="em" style={{background}}/>
-                    <p key="p">{content}</p>
+                    {/*<p key="p">{content}</p>*/}
                 </QueueAnim>
             </Element>);
         });
