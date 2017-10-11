@@ -140,7 +140,11 @@ class ContentPart extends Component {
                                 overflow: 'auto',
                                 backgroundColor: '#ffffff',
                             }}><br/>
-                                <div className={styles.content}></div>
+                                <div className={styles.content}>
+                                    <DetailSwitch/>
+                                    <PicDetails/>
+
+                                </div>
                             </Col>
                         ] : null
                         }

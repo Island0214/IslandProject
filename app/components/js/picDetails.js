@@ -11,18 +11,18 @@ const textData = {
     title: 'Motorcycle',
 };
 let dataArray = [
-    { image: 'https://zos.alipayobjects.com/rmsportal/DGOtoWASeguMJgV.png' },
-    { image: 'https://zos.alipayobjects.com/rmsportal/BXJNKCeUSkhQoSS.png' },
-    { image: 'https://zos.alipayobjects.com/rmsportal/TDIbcrKdLWVeWJM.png' },
-    { image: 'https://zos.alipayobjects.com/rmsportal/SDLiKqyfBvnKMrA.png' },
-    { image: 'https://zos.alipayobjects.com/rmsportal/UcVbOrSDHCLPqLG.png' },
-    { image: 'https://zos.alipayobjects.com/rmsportal/QJmGZYJBRLkxFSy.png' },
-    { image: 'https://zos.alipayobjects.com/rmsportal/PDiTkHViQNVHddN.png' },
-    { image: 'https://zos.alipayobjects.com/rmsportal/beHtidyjUMOXbkI.png' },
-    { image: 'https://zos.alipayobjects.com/rmsportal/vJcpMCTaSKSVWyH.png' },
-    { image: 'https://zos.alipayobjects.com/rmsportal/dvQuFtUoRmvWLsZ.png' },
-    { image: 'https://zos.alipayobjects.com/rmsportal/QqWQKvgLSJaYbpr.png' },
-    { image: 'https://zos.alipayobjects.com/rmsportal/pTfNdthdsUpLPLJ.png' },
+    { image: '1/818' },
+    { image: '1/819' },
+    { image: '1/820' },
+    { image: '1/821' },
+    { image: '1/822' },
+    { image: '1/823' },
+    { image: '1/824' },
+    { image: '1/825' },
+    // { image: 'https://zos.alipayobjects.com/rmsportal/vJcpMCTaSKSVWyH.png' },
+    // { image: 'https://zos.alipayobjects.com/rmsportal/dvQuFtUoRmvWLsZ.png' },
+    // { image: 'https://zos.alipayobjects.com/rmsportal/QqWQKvgLSJaYbpr.png' },
+    // { image: 'https://zos.alipayobjects.com/rmsportal/pTfNdthdsUpLPLJ.png' },
 ];
 dataArray = dataArray.map(item => ({ ...item, ...textData }));
 class PicDetails extends React.Component {
@@ -76,10 +76,10 @@ class PicDetails extends React.Component {
     };
 
     getLiChildren = () => {
-        const imgWidth = 110;
-        const imgHeight = 76;
-        const imgBoxWidth = 130;
-        const imgBoxHeight = 96;
+        const imgWidth = 150;
+        const imgHeight = 150;
+        const imgBoxWidth = 150;
+        const imgBoxHeight = 150;
         return dataArray.map((item, i) => {
             const { image, title, content } = item;
             const isEnter = typeof this.state.picOpen[i] === 'boolean';
@@ -94,7 +94,7 @@ class PicDetails extends React.Component {
             let imgTop = isTop ? imgBoxHeight : 0;
             imgTop = isEnter ? imgTop : 0;
 
-            const liStyle = isEnter ? { width: '100%', height: 175, zIndex: 1 } : null;
+            const liStyle = isEnter ? { width: '100%', height: 300, zIndex: 1 } : null;
             const liAnimation = isOpen ?
                 ({ boxShadow: '0 2px 8px rgba(140, 140, 140, .35)' }) :
                 ({ boxShadow: '0 0px 0px rgba(140, 140, 140, 0)' });
@@ -111,9 +111,9 @@ class PicDetails extends React.Component {
             aAnimation = isOpen ?
                 ({
                     ease: 'easeInOutCubic',
-                    left: isRight ? (imgBoxWidth * 2) - 10 : 0,
+                    left: isRight ? (imgBoxWidth * 2) + 20 : 0,
                     width: '50%',
-                    height: 175,
+                    height: 300,
                     top: 0,
                 }) : aAnimation;
 
@@ -138,7 +138,7 @@ class PicDetails extends React.Component {
                     }}
                     animation={aAnimation}
                 >
-                    <img src={image} width="100%" height="100%" />
+                    <img src={require('../images/' + image + '.png')} width="100%" height="100%" />
                 </TweenOne>
                 <TweenOneGroup
                     enter={[
