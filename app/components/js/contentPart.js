@@ -7,7 +7,9 @@ import actions from '../redux/actions/UIFrameAction'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux';
 import LeftNav from '../js/leftNav.js'
-import DetailSwitch from '../js/detailSwitch'
+import DetailSwitch from '../js/detailSwitch';
+import PicDetails from '../js/picDetails';
+
 class ContentPart extends Component {
     constructor(props) {
         super(props);
@@ -125,6 +127,7 @@ class ContentPart extends Component {
                             }}><br/>
                                 <div className={styles.content}>
                                     <DetailSwitch/>
+                                    <PicDetails/>
                                 </div>
                             </Col>
                         ] : null

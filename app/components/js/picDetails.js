@@ -1,8 +1,9 @@
+import React, {Component} from 'react'
 import QueueAnim from 'rc-queue-anim';
 import PropTypes from 'prop-types';
 import TweenOne, { TweenOneGroup } from 'rc-tween-one';
 import Icon from 'antd/lib/icon';
-
+import '../css/picDetails.css'
 const textData = {
     content: 'Taiwan called motorcycle, motor bike [1] or a motorcycle,' +
     ' the motorcycle referred to in the mainland, Hong Kong and Southeast' +
@@ -24,7 +25,7 @@ let dataArray = [
     { image: 'https://zos.alipayobjects.com/rmsportal/pTfNdthdsUpLPLJ.png' },
 ];
 dataArray = dataArray.map(item => ({ ...item, ...textData }));
-class PicDetailsDemo extends React.Component {
+class PicDetails extends React.Component {
     static propTypes = {
         className: PropTypes.string,
     };
@@ -168,19 +169,19 @@ class PicDetailsDemo extends React.Component {
         return (<div>
             <div className={`${this.props.className}-wrapper`}>
                 <div className={this.props.className}>
-                    <div className={`${this.props.className}-header`}>
-                        <ul>
-                            <li />
-                            <li />
-                            <li />
-                            <li />
-                            <li />
-                        </ul>
-                    </div>
-                    <QueueAnim type="bottom" className={`${this.props.className}-title`}>
-                        <h1 key="h1">Motion Design</h1>
-                        <p key="p">The react animation solution</p>
-                    </QueueAnim>
+                    {/*<div className={`${this.props.className}-header`}>*/}
+                        {/*<ul>*/}
+                            {/*<li />*/}
+                            {/*<li />*/}
+                            {/*<li />*/}
+                            {/*<li />*/}
+                            {/*<li />*/}
+                        {/*</ul>*/}
+                    {/*</div>*/}
+                    {/*<QueueAnim type="bottom" className={`${this.props.className}-title`}>*/}
+                        {/*<h1 key="h1">Motion Design</h1>*/}
+                        {/*<p key="p">The react animation solution</p>*/}
+                    {/*</QueueAnim>*/}
                     <QueueAnim
                         delay={this.getDelay}
                         component="ul"
@@ -195,6 +196,5 @@ class PicDetailsDemo extends React.Component {
         </div>);
     }
 }
-ReactDOM.render(
-    <PicDetailsDemo />
-    , mountNode);
+
+export default PicDetails
