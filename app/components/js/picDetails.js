@@ -5,20 +5,43 @@ import TweenOne, { TweenOneGroup } from 'rc-tween-one';
 import Icon from 'antd/lib/icon';
 import '../css/picDetails.css'
 const textData = {
-    content: 'Taiwan called motorcycle, motor bike [1] or a motorcycle,' +
-    ' the motorcycle referred to in the mainland, Hong Kong and Southeast' +
-    ' Asia known as motorcycles.',
-    title: 'Motorcycle',
+    title: 'Appliances',
+    color: '#e4f3f7',
+    titleColor: '#becef3'
 };
 let dataArray = [
-    { image: '1/818' },
-    { image: '1/819' },
-    { image: '1/820' },
-    { image: '1/821' },
-    { image: '1/822' },
-    { image: '1/823' },
-    { image: '1/824' },
-    { image: '1/825' },
+    {
+        image: '1/818',
+        content: 'AAAAAAAA'
+    },
+    {
+        image: '1/819',
+        content: 'BBBBBBBB'
+    },
+    {
+        image: '1/820',
+        content: 'CCCCCCCC'
+    },
+    {
+        image: '1/821',
+        content: 'DDDDDDDD'
+    },
+    {
+        image: '1/822',
+        content: 'EEEEEEEE'
+    },
+    {
+        image: '1/823',
+        content: 'FFFFFFFF'
+    },
+    {
+        image: '1/824',
+        content: 'GGGGGGGG'
+    },
+    {
+        image: '1/825',
+        content: 'HHHHHHHH'
+    },
     // { image: 'https://zos.alipayobjects.com/rmsportal/vJcpMCTaSKSVWyH.png' },
     // { image: 'https://zos.alipayobjects.com/rmsportal/dvQuFtUoRmvWLsZ.png' },
     // { image: 'https://zos.alipayobjects.com/rmsportal/QqWQKvgLSJaYbpr.png' },
@@ -81,7 +104,7 @@ class PicDetails extends React.Component {
         const imgBoxWidth = 150;
         const imgBoxHeight = 150;
         return dataArray.map((item, i) => {
-            const { image, title, content } = item;
+            const { image, title, content, color, titleColor } = item;
             const isEnter = typeof this.state.picOpen[i] === 'boolean';
             const isOpen = this.state.picOpen[i];
 
@@ -155,9 +178,9 @@ class PicDetails extends React.Component {
                             left: isRight ? '0%' : '50%',
                         }}
                     >
-                        <h1>{title}</h1>
+                        <h1 style={{color: titleColor}}>{title}</h1>
                         <Icon type="cross" onClick={e => this.onClose(e, i)} />
-                        <em />
+                        <em style={{background: color}} />
                         <p>{content}</p>
                     </div>}
                 </TweenOneGroup>

@@ -148,8 +148,10 @@
 }
 
 :global(.pic-details-demo-text-wrapper h1) {
-    font-size: 18px;
-    margin: 5px auto;
+    font-size: 30px;
+    margin: 50px auto;
+    font-family: 'Andale Mono', 'Helvetica';
+    letter-spacing: 5px;
 }
 
 :global(.pic-details-demo-text-wrapper i) {
@@ -168,9 +170,12 @@
 }
 
 :global(.pic-details-demo-text-wrapper p) {
-    font-size: 12px;
-    margin-top: 10px;
+    font-size: 18px;
+    margin-top: 50px;
+    color: grey;
     line-height: 16px;
+    font-family: 'Andale Mono', 'Helvetica';
+    letter-spacing: 8px;
 }
 @media screen and (max-width: 414px) {
     :global(.pic-details-demo){
